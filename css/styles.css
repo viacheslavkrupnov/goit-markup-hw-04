@@ -152,8 +152,21 @@ img {
   margin-left: auto;
 }
 
-.contacts .item {
+.link {
   display: block;
+  height: auto;
+  max-width: 100%;
+  color: var(--primary-text-color);
+}
+
+.contact-icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.contact-icon:hover,
+.contact-icon:focus {
+  fill: var(--accent-color);
 }
 
 .contacts .item + .item {
@@ -256,20 +269,22 @@ img {
 }
 
 .thumb {
-  display: block;
+  display: flex;
   content: '';
+  justify-content: center;
+  align-items: center;
   margin: 0;
   width: 270px;
   height: 120px;
   background-color: var(--secondary-bg-color);
+  border-radius: 4px;
   margin-bottom: 30px;
+  background-size: contain;
 }
 
 .feature-icon {
   width: 70px;
   height: 70px;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .feature-list .title {
@@ -356,6 +371,48 @@ img {
   margin: 0;
 }
 
+.social-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 16px;
+
+  width: 206px;
+  height: 44px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+
+.social-item {
+  margin: 0;
+  padding: 0;
+}
+
+.social-logo {
+  border: none;
+  display: flex;
+  content: '';
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  margin: 0;
+  border-radius: 50%;
+  background-position: center;
+  color: #afb1b8;
+}
+
+.social-logo:hover,
+.social-logo:focus {
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+}
+
+.social-icon {
+  fill: currentColor;
+}
+
 /* Clients */
 
 .clients-list {
@@ -365,45 +422,46 @@ img {
   list-style: none;
 }
 
-/* .clients-list .client-icon {
-  display: block;
-  width: 170px;
-  height: 90px;
-  padding: 0;
-  border: 1px solid #afb1b8;
-  box-sizing: border-box;
-  border-radius: 4px;
-  background-color: var(--primary-white-color);
-  background-image: url('../images/logo-1.svg');
-  cursor: pointer;
-  background-repeat: no-repeat;
-  background-position: center;
-} */
-
 .clients-item {
   display: block;
-  content: '';
-  width: 170px;
-  height: 90px;
-  padding: 0;
-  border: 1px solid #afb1b8;
-  box-sizing: border-box;
-  border-radius: 4px;
-  background-color: var(--primary-white-color);
-  cursor: pointer;
-  background-repeat: no-repeat;
-  background-position: center;
+  margin-right: 30px;
+}
+
+.client-item:hover,
+.client-item:focus {
+  border: 1px solid var(--accent-color);
+  fill: var(--accent-color);
+}
+
+.clients-item:nth-child(6n) {
+  margin-right: 0;
 }
 
 .client-logo {
-  padding: 0;
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: '';
+  width: 170px;
+  height: 90px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #afb1b8;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #afb1b8;
+}
+
+.client-logo:hover,
+.client-logo:focus {
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
 
 .logo-icon {
-  width: 45px;
-  height: 50px;
-  outline: 1px solid blue;
+  fill: currentColor;
 }
 
 /* Button */
@@ -438,6 +496,12 @@ footer {
 .page-footer {
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+.page-footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .logo.footer {
@@ -479,6 +543,55 @@ footer {
 .footer-link:hover,
 .footer-link:focus {
   color: var(--accent-color);
+}
+
+.connect {
+  margin: 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  color: var(--primary-white-color);
+}
+
+.footer-social {
+  display: inline-block;
+  width: 206px;
+  height: 80px;
+  margin-left: 70px;
+}
+
+.social-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+
+  width: 206px;
+  height: 44px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+
+.social-logo.bottom {
+  border: none;
+  display: flex;
+  content: '';
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  margin: 0;
+  border-radius: 50%;
+  background-position: center;
+  color: var(--primary-white-color);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-logo.bottom:hover,
+.social-logo.bottom:focus {
+  background-color: var(--accent-color);
 }
 
 /* Стили для portfolio */
