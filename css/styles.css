@@ -271,7 +271,6 @@ img {
 
 .thumb {
   display: flex;
-  content: '';
   justify-content: center;
   align-items: center;
   margin: 0;
@@ -280,7 +279,6 @@ img {
   background-color: var(--secondary-bg-color);
   border-radius: 4px;
   margin-bottom: 30px;
-  background-size: contain;
 }
 
 .feature-icon {
@@ -501,7 +499,7 @@ footer {
 
 .page-footer .container {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: flex-start;
 }
 
