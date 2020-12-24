@@ -500,7 +500,6 @@ footer {
 .page-footer .container {
   display: flex;
   align-items: baseline;
-  justify-content: flex-start;
 }
 
 .logo.footer {
